@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Retalix.Jumbo.Client.POS.Presentation.Views.Views.BusinessUnitInputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Retalix.Jumbo.Client.POS.Presentation.Views.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="0,0,-382.6,67.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="888*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtCustomerId"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39.514,79,0,0" Grid.Column="3" Visibility="Hidden"/>
+
+        <TextBox x:Name="txtUnitId" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="138.514,23,0,0" Grid.Column="3" Text="{Binding BusinessUnitId, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="txtUnitName" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="138.514,79,0,0" Grid.Column="3" Text="{Binding BusinessUnitName, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="txtUnitLocation" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="138.514,131,0,0" Grid.Column="3" Text="{Binding BusinessUnitLocation, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="txtUnitAddress" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="138.514,188,0,0" Grid.Column="3" Text="{Binding BusinessUnitAddress, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label x:Name="lblUnitId" Content="Business Unit Id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37.514,28,0,0" Grid.Column="3" FontWeight="Bold"/>
+        <Label x:Name="lblUnitName" Content="Unit Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39.514,79,0,0" Grid.Column="3" FontWeight="Bold"/>
+        <Label x:Name="lblUnitLocation" Content="Unit Location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39.514,139,0,0" Grid.Column="3" FontWeight="Bold"/>
+        <Label x:Name="lblUnitAddress" Content="Unit Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37.514,196,0,0" Grid.Column="3" FontWeight="Bold"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="138.514,252,0,0"  Grid.Column="3" FontWeight="Bold" Height="27" Command="{Binding AddCommand}"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="218.514,252,0,0"  Grid.Column="3" FontWeight="Bold" Height="27" />
+    </Grid>
+</UserControl>

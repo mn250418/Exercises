@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BusinessUnitConfigurationLookup"
+    targetNamespace="http://retalix.com/R10/services"
+    elementFormDefault="qualified"
+    xmlns="http://retalix.com/R10/services"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    attributeFormDefault="unqualified"
+>
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/RetalixCommonHeader.xsd"/>
+	<xs:include schemaLocation="BusinessUnitConfiguration.xsd"/>
+	<xs:element name="BusinessUnitConfigurationLookupRequest" type="BusinessUnitConfigurationLookupRequest"/>
+	<xs:element name="BusinessUnitConfigurationLookupResponse" type="BusinessUnitConfigurationLookupResponse"/>
+	
+	<xs:complexType name="BusinessUnitConfigurationLookupRequest">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="SearchCriteria" type="SearchCriteriaType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SearchCriteriaType">
+		<xs:sequence>
+			<xs:element name="BusinessUnitId" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BusinessUnitConfigurationLookupResponse">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="BusinessUnitConfigurations" type="BusinessUnitConfigurationType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="Retalix.Jumbo.ConnectivityServices.BusinessUnit.DMS"
+           assembly="Retalix.Jumbo.ConnectivityServices">
+
+	<class name="BusinessUnitConfiguration" table="BusinessUnitConfiguration" lazy="false">
+
+		<id name="BusinessUnitId" column="BusinessUnitId" type="int">
+			<generator class="identity" />
+		</id>
+		<property name="BusinessUnitName" type="string"/>
+		<property name="BusinessUnitLocation" type="string"/>
+		<property name="BusinessUnitAddress" type="string"/>
+	</class>
+
+</hibernate-mapping>

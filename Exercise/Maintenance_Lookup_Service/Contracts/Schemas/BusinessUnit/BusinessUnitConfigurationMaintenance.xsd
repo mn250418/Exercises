@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="http://retalix.com/R10/services"
+    elementFormDefault="qualified"
+	attributeFormDefault="qualified"
+    xmlns="http://retalix.com/R10/services"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/RetalixCommonHeader.xsd"/>
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/ActionTypeCodes.xsd"/>
+	<xs:include schemaLocation="BusinessUnitConfiguration.xsd"/>
+	<xs:element name="BusinessUnitConfigurationMaintenanceRequest" type="BusinessUnitConfigurationMaintenanceRequest"/>
+	<xs:element name="BusinessUnitConfigurationMaintenanceResponse" type="BusinessUnitConfigurationMaintenanceResponse"/>
+
+	<xs:complexType name="BusinessUnitConfigurationMaintenanceRequest">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="BusinessUnitConfiguration" type="BusinessUnitConfigurationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Action" type="ActionTypeCodes" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BusinessUnitConfigurationMaintenanceResponse">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="http://retalix.com/R10/services"
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified"
+    xmlns="http://retalix.com/R10/services"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:complexType name="BusinessUnitConfigurationType">
+		<xs:sequence>
+			<xs:element name="BusinessUnitId" type="xs:int" />
+			<xs:element name="BusinessUnitName" type="xs:string" />
+			<xs:element name="BusinessUnitLocation" type="xs:string" />
+			<xs:element name="BusinessUnitAddress" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
